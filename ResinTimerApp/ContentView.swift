@@ -34,7 +34,6 @@ struct Home : View {
     @State var twentyResinTime = 9600
     @State var countDownFull = 76800
     @State var time = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    private var notificationPublisher = Notification()
    
     var body: some View {
         
@@ -106,9 +105,8 @@ struct Home : View {
                             withAnimation(.default) {
                                 self.to = 0
                             }
-                            //Stop Local Notifications
-                            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
                         }
+                        self.Notify(title: "20 resin", body: "is ready")
                         self.start.toggle()
                      //   self.setupLocalNotificationsFor()
                     }) {
@@ -223,6 +221,12 @@ struct Home : View {
                 print(Date())
         }
             
+        
+            .onAppear(perform: {
+                UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert]) { _, _ in
+                }
+                
+            })
             
         .onReceive(self.time) { (_) in
             
@@ -238,19 +242,7 @@ struct Home : View {
 
                 } else {
                     self.start.toggle()
-                    //Stop Local Notifications
-                    UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-                }
-                switch count {
-                case 10:
-                    Notify(title: "Первородная смола", body: "20")
-                case 15:
-                    Notify(title: "Первородная смола", body: "40")
-                case 20:
-                    Notify(title: "Первородная смола", body: "60")
-                
-                default:
-                    break
+                    
                 }
             }
         }
@@ -300,8 +292,8 @@ struct Home : View {
     func Notify(title: String, body: String) {
         
         let content = UNMutableNotificationContent()
-        content.title = title
-        content.body = body
+        content.title = "20"
+        content.body = "20 resin is ready"
         content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "sound.mp3"))
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
