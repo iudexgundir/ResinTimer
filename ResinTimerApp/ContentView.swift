@@ -302,6 +302,22 @@ struct Home : View {
         
         UNUserNotificationCenter.current().add(req, withCompletionHandler: nil)
     }
+    
+    
+    @ViewBuilder
+    func NewTimerView() -> some View {
+        VStack(spacing: 15){
+            
+        }
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background{
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .fill(Color.indigo)
+                .ignoresSafeArea()
+        }
+    }
+
 }
     
     
