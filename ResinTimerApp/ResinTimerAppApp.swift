@@ -9,15 +9,13 @@ import SwiftUI
 
 @main
 struct ResinTimerAppApp: App {
+    // MARK: Since
+    @StateObject var resinTimerModel: ResinTimerModel = .init()
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
-                    print("applicationDidBecomeActive")
-                }
-                .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
-                    print("applicationWillEnterForeground")
+                .environmentObject(resinTimerModel)
                 }
         }
     }
-}
+

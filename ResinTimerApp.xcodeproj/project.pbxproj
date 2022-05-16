@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0E51572831F8D4001BE072 /* ResinTimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0E51562831F8D4001BE072 /* ResinTimerModel.swift */; };
+		0F0E51592831FA88001BE072 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0E51582831FA88001BE072 /* Home.swift */; };
 		0FB250A9280B814F00B971E0 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0FB250A8280B814F00B971E0 /* sound.mp3 */; };
 		0FCC7D832801FCE7004F4343 /* ResinTimerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC7D822801FCE7004F4343 /* ResinTimerAppApp.swift */; };
 		0FCC7D852801FCE7004F4343 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC7D842801FCE7004F4343 /* ContentView.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F0E51562831F8D4001BE072 /* ResinTimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResinTimerModel.swift; sourceTree = "<group>"; };
+		0F0E51582831FA88001BE072 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		0FB250A8280B814F00B971E0 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 		0FCC7D7F2801FCE7004F4343 /* ResinTimerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResinTimerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCC7D822801FCE7004F4343 /* ResinTimerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResinTimerAppApp.swift; sourceTree = "<group>"; };
@@ -37,6 +41,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F0E51542831F8A1001BE072 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F0E51582831FA88001BE072 /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F0E51552831F8AD001BE072 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F0E51562831F8D4001BE072 /* ResinTimerModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0FCC7D762801FCE7004F4343 = {
 			isa = PBXGroup;
 			children = (
@@ -56,11 +76,13 @@
 		0FCC7D812801FCE7004F4343 /* ResinTimerApp */ = {
 			isa = PBXGroup;
 			children = (
+				0FCC7D822801FCE7004F4343 /* ResinTimerAppApp.swift */,
+				0FCC7D842801FCE7004F4343 /* ContentView.swift */,
+				0F0E51552831F8AD001BE072 /* ViewModel */,
+				0F0E51542831F8A1001BE072 /* View */,
 				0FB250A8280B814F00B971E0 /* sound.mp3 */,
 				0FCC7D922801FDAD004F4343 /* Info.plist */,
 				0FCC7D902801FD93004F4343 /* HYWenHei.ttf */,
-				0FCC7D822801FCE7004F4343 /* ResinTimerAppApp.swift */,
-				0FCC7D842801FCE7004F4343 /* ContentView.swift */,
 				0FCC7D862801FCE7004F4343 /* Assets.xcassets */,
 				0FCC7D882801FCE7004F4343 /* Preview Content */,
 			);
@@ -148,6 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FCC7D852801FCE7004F4343 /* ContentView.swift in Sources */,
+				0F0E51572831F8D4001BE072 /* ResinTimerModel.swift in Sources */,
+				0F0E51592831FA88001BE072 /* Home.swift in Sources */,
 				0FCC7D832801FCE7004F4343 /* ResinTimerAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
