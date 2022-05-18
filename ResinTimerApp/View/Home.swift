@@ -18,7 +18,8 @@ struct Home : View {
     @State var twentyResinTime = 9600
     @State var countDownFull = 76800
     @State var time = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-   
+    @EnvironmentObject var resinTimerModel: ResinTimerModel
+    
     var body: some View {
         
         ZStack {
@@ -287,11 +288,27 @@ struct Home : View {
         UNUserNotificationCenter.current().add(req, withCompletionHandler: nil)
     }
     
-    
+    // MARK: NewTimerView
     @ViewBuilder
     func NewTimerView() -> some View {
         VStack(spacing: 15){
+         Text("Add New Timer")
+                .font(.title.bold())
+                .foregroundColor(.white)
+                .padding(.top, 10)
             
+            HStack(spacing: 15) {
+                Text("\(resinTimerModel.hour) hr")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white.opacity(0.3))
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 12)
+                    .background{
+                        Capsule()
+                            .fill(.white.opacity(0.1))
+                    }
+            }
         }
         .padding()
         .frame(maxWidth: .infinity)
