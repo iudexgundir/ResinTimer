@@ -76,14 +76,14 @@
 		0FCC7D812801FCE7004F4343 /* ResinTimerApp */ = {
 			isa = PBXGroup;
 			children = (
-				0FCC7D822801FCE7004F4343 /* ResinTimerAppApp.swift */,
-				0FCC7D842801FCE7004F4343 /* ContentView.swift */,
 				0F0E51552831F8AD001BE072 /* ViewModel */,
 				0F0E51542831F8A1001BE072 /* View */,
+				0FCC7D822801FCE7004F4343 /* ResinTimerAppApp.swift */,
+				0FCC7D842801FCE7004F4343 /* ContentView.swift */,
+				0FCC7D862801FCE7004F4343 /* Assets.xcassets */,
 				0FB250A8280B814F00B971E0 /* sound.mp3 */,
 				0FCC7D922801FDAD004F4343 /* Info.plist */,
 				0FCC7D902801FD93004F4343 /* HYWenHei.ttf */,
-				0FCC7D862801FCE7004F4343 /* Assets.xcassets */,
 				0FCC7D882801FCE7004F4343 /* Preview Content */,
 			);
 			path = ResinTimerApp;

@@ -308,7 +308,25 @@ struct Home : View {
                         Capsule()
                             .fill(.white.opacity(0.1))
                     }
+                Text("\(resinTimerModel.minutes) min")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white.opacity(0.3))
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 12)
+                    .background{
+                        Capsule()
+                            .fill(.white.opacity(0.1))
             }
+                Text("\(resinTimerModel.seconds) sec")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white.opacity(0.3))
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 12)
+                    .background{
+                        Capsule()
+                            .fill(.white.opacity(0.1))
         }
         .padding()
         .frame(maxWidth: .infinity)
@@ -325,5 +343,7 @@ struct Home_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(ResinTimerModel())
+    }
+}
     }
 }
