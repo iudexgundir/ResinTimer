@@ -14,7 +14,7 @@ class ResinTimerModel: NSObject, ObservableObject {
     @Published var isStarted: Bool = false
     
     @Published var hour: Int = 0
-    @Published var minute: Int = 0
+    @Published var minutes: Int = 0
     @Published var seconds: Int = 0
 }
 

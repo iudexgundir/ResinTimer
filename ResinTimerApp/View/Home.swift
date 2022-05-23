@@ -336,8 +336,25 @@ struct Home : View {
                 .ignoresSafeArea()
         }
     }
+            .padding(.top, 20)
+            
+            Button {
+                
+            } label: {
+                Text("Save")
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .padding(.vertical)
+                    .padding(.horizontal, 100)
+                    .background {
+                        Capsule()
+                            .fill(Color.indigo)
+                    }
+            }
+            .padding(.top)
 
 }
+    }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
@@ -345,5 +362,5 @@ struct Home_Previews: PreviewProvider {
             .environmentObject(ResinTimerModel())
     }
 }
-    }
+    
 }
